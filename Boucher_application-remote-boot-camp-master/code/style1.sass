@@ -1,0 +1,79 @@
+@use "sass:math"
+//defined the main colors and font to work with
+$main-font: 40px Helvetica, sans-serif
+$main-color: black
+$accent1: #778899
+$accent2: #FF69B4
+
+//The recommended size for websites I found was 960px and a SASS tutorial recommended the below calculation for width
+//The text alignment and display I found through google and trial and error
+
+//defined a box style for the headers
+%basic-box
+  width: math.div(600px, 960px) * 100%
+  margin: 0 auto
+  border: 15px solid $main-color
+  padding: 30px
+  text-align: center
+  font: $main-font
+  display: grid
+
+//defined a box style for the text
+%para-box
+  width: math.div(600px, 960px) * 100%
+  margin: 0 auto
+  border: 15px solid $accent2
+  padding: 30px
+  height: 50%
+  text-align: justify
+  overflow-wrap: break-word
+  display: grid
+  background-color: white
+
+// I defined each class, calling on the variables and adding customization where desired
+// when I found myself repeating elements I moved them to the predefined styles to simplify the code below
+
+body
+
+  .title
+    @extend %basic-box
+    font-size: 6em
+    color: $accent2
+    background-color: $main-color
+    text-shadow: 5px 0 1px $accent1
+    border-top-left-radius: 25px
+    border-top-right-radius: 25px
+  // decided to round the corners of the top and bottom boxes
+
+  .subtitle
+    @extend %basic-box
+    background-color: $main-color
+    color: white
+    font-style: italic
+
+  .para
+    @extend %para-box
+    text-indent: 50px
+
+    .row
+      display: flex
+
+      .column
+        flex: 25%
+        padding: 5px
+  //looked up how to make the screenshots show up next to each other using.
+
+  .links
+    @extend %para-box
+    border-bottom-left-radius: 25px
+    border-bottom-right-radius: 25px
+
+
+
+
+
+
+
+
+
+

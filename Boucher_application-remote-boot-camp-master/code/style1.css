@@ -1,0 +1,51 @@
+body .subtitle, body .title {
+  width: 62.5%;
+  margin: 0 auto;
+  border: 15px solid black;
+  padding: 30px;
+  text-align: center;
+  font: 40px Helvetica, sans-serif;
+  display: grid;
+}
+
+body .links, body .para {
+  width: 62.5%;
+  margin: 0 auto;
+  border: 15px solid #FF69B4;
+  padding: 30px;
+  height: 50%;
+  text-align: justify;
+  overflow-wrap: break-word;
+  display: grid;
+  background-color: white;
+}
+
+body .title {
+  font-size: 6em;
+  color: #FF69B4;
+  background-color: black;
+  text-shadow: 5px 0 1px #778899;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+body .subtitle {
+  background-color: black;
+  color: white;
+  font-style: italic;
+}
+body .para {
+  text-indent: 50px;
+}
+body .para .row {
+  display: flex;
+}
+body .para .row .column {
+  flex: 25%;
+  padding: 5px;
+}
+body .links {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+/*# sourceMappingURL=style1.css.map */
